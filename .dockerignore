@@ -1,0 +1,6 @@
+**
+
+!./requirements.txt
+!./main.py
+!./fire_incident_schema
+!./metabase_db/metabase.db.mv.db

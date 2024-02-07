@@ -1,0 +1,6 @@
+fire-incident-test:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: './duck_db/incidents.db'

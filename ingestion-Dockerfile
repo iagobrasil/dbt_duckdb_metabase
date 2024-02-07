@@ -1,0 +1,10 @@
+FROM python:3.11-slim-bullseye
+
+COPY ./main.py ./main.py
+COPY ./requirements.txt ./requirements.txt
+COPY ./fire_incident_schema ./fire_incident_schema
+RUN mkdir duck_db
+
+RUN pip install -r requirements.txt
+
+CMD ["python3", "main.py"]
