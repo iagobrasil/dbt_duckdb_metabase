@@ -161,6 +161,7 @@ cython_debug/
 
 # duckdb database
 duck_db/*
+!duck_db/.gitkeep
 .DS_STORE
 
 # dbt
