@@ -2,6 +2,14 @@
 
 In this project we have a simple ELT using python for extaction and load, [dbt](https://docs.getdbt.com/) for transformation and [DuckDB](https://duckdb.org/) as a lightweight data warehouse. In addition to the ELT we included a free data visualization tool [Metabase]() with a simple report on the gathered data. The process works as follows:
 
+## Set you local environment
+First of all, set your local python environment:
+```
+python -m venv ./.venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
 ## Extract and Load
 We have a simple python script (`main.py`) which requests the csv from the data source, reads the file in a streaming fashion to not occupy all the memory and then saves to a temporary file locally so it can be loaded by the DuckDB.
 To load the file into DuckDB we simply use the native read_csv function and we persist data as a table in the database file.
