@@ -26,7 +26,7 @@ def copy_file_to_duck_db():
             schema = open('fire_incident_schema').read()
             log.info("Creating table in duckdb Database")
             newline = "\n"
-            con.sql(f"CREATE OR REPLACE TABLE raw_fire_incidents AS SELECT * FROM read_csv('{file.name}', columns = {schema.replace(newline, ' ')}, header=1, ignore_errors=TRUE);")
+            con.sql(f"CREATE OR REPLACE TABLE fire_incidents AS SELECT * FROM read_csv('{file.name}', columns = {schema.replace(newline, ' ')}, header=1, ignore_errors=TRUE);")
 
 if __name__ == '__main__':
     copy_file_to_duck_db()
